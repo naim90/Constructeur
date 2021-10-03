@@ -26,7 +26,14 @@ namespace Constructeurs
 
 		public double GetFloorMaxSize()
         {
-			return _hauteurBatiment / _nombreEtages;
+			if (_nombreEtages != 0)
+				return _hauteurBatiment / _nombreEtages;
+
+			else
+			{
+				Console.WriteLine("Le nombre d'etage ne peux pas être 0");
+				return 0;
+			}
         }
 
 		public double GetFloorCount()
